@@ -10,14 +10,21 @@
         <StackPanel DockPanel.Dock="Left">
             <GroupBox Name="grpOrdenen" Header="Ordenen per">
                 <StackPanel>
-                    <RadioButton GroupName="order" Margin="3">Bestemming</RadioButton>
-                    <RadioButton  GroupName="order" Margin="3">Spoor</RadioButton>
+                    <RadioButton Name="rbBestemming" GroupName="order" Margin="3">Bestemming</RadioButton>
+                    <RadioButton Name="rbSpoor" GroupName="order" Margin="3">Spoor</RadioButton>
                 </StackPanel>
             </GroupBox>
-            <Button Name="btnBekijk" Margin="3">Bekijk Vervoer</Button>
+            <Button Name="btnBekijk" Margin="3" Click="btnBekijk_Click">Bekijk Vervoer</Button>
         </StackPanel>
-        <TreeView>
-            
+        <TreeView Name="treeTreinen">
+            <TreeView.Resources>
+                <HierarchicalDataTemplate DataType="{x:Type TreeViewItem}" ItemsSource="{Binding Path=SubItems}">
+                    <TextBlock Text="{Binding Path=Title}"></TextBlock>
+                </HierarchicalDataTemplate>
+                <DataTemplate DataType="{x:Type local:SubTreeViewItem}">
+                    <TextBlock Text="{Binding Path=Title}"></TextBlock>
+                </DataTemplate>
+            </TreeView.Resources>
         </TreeView>
     </DockPanel>
 </Window>

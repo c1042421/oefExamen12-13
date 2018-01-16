@@ -63,7 +63,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataManager.cs" />
+    <Compile Include="PassagiersTrein.cs" />
     <Compile Include="Spoor.cs" />
+    <Compile Include="SubTreeViewItem.cs" />
+    <Compile Include="TreeViewItem.cs" />
     <Compile Include="Trein.cs">
       <DependentUpon>TreinModel.tt</DependentUpon>
     </Compile>

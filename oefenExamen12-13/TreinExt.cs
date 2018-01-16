@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace oefenExamen12_13
             Kentekennr = kentekennr;
             Bestemming = bestemming;
             Vertrek = vertrek;
+            Timer1 = new DispatcherTimer();
             Timer1.Interval = new TimeSpan(1000);
             Timer1.Tick += timer1_Tick;
         }
@@ -34,6 +36,7 @@ namespace oefenExamen12_13
         public void StartTimer() => Timer1.Start();
 
         public override string ToString() => Spoor + " - " + Bestemming + " - " + Vertrek;
-      
+
+       
     }
 }
