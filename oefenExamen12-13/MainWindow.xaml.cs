@@ -32,7 +32,7 @@ namespace oefenExamen12_13
         {
             List<PassagiersTrein> treinen = dm.GetTreingegevens();
             Dictionary<string, TreeViewItem> itemsDict = new Dictionary<string, TreeViewItem>();
-            List<TreeViewItem> items = new List<TreeViewItem>();
+            
 
             bool byBestemming = rbBestemming.IsChecked.Value;
 
@@ -79,6 +79,10 @@ namespace oefenExamen12_13
                     });
                 }
             }
+
+            List<TreeViewItem> items = itemsDict.Values.ToList();
+            //TODO sort by title
+            
 
             treeTreinen.ItemsSource = itemsDict.Values;
         }

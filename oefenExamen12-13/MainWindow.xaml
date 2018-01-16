@@ -18,7 +18,7 @@
         </StackPanel>
         <TreeView Name="treeTreinen">
             <TreeView.Resources>
-                <HierarchicalDataTemplate DataType="{x:Type TreeViewItem}" ItemsSource="{Binding Path=SubItems}">
+                <HierarchicalDataTemplate DataType="{x:Type local:TreeViewItem}" ItemsSource="{Binding Path=SubItems}">
                     <TextBlock Text="{Binding Path=Title}"></TextBlock>
                 </HierarchicalDataTemplate>
                 <DataTemplate DataType="{x:Type local:SubTreeViewItem}">
