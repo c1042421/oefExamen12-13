@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:oefenExamen12_13"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Left">
+            <GroupBox Name="grpOrdenen" Header="Ordenen per">
+                <StackPanel>
+                    <RadioButton GroupName="order" Margin="3">Bestemming</RadioButton>
+                    <RadioButton  GroupName="order" Margin="3">Spoor</RadioButton>
+                </StackPanel>
+            </GroupBox>
+            <Button Name="btnBekijk" Margin="3">Bekijk Vervoer</Button>
+        </StackPanel>
+        <TreeView>
+            
+        </TreeView>
+    </DockPanel>
 </Window>
